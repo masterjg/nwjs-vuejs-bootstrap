@@ -1,14 +1,15 @@
 {
-  "name": "nwjs-bootstrap",
-  "version": "0.5.0",
-  "description": "NW.js bootstrap to kickstart your project.",
+  "name": "nwjs-vuejs-bootstrap",
+  "version": "0.0.1",
+  "description": "NW.js + Vue.js bootstrap to kickstart your project.",
   "keywords": [
     "nw.js",
+    "vue.js",
     "bootstrap"
   ],
-  "homepage": "https://github.com/masterjg/nwjs-bootstrap",
+  "homepage": "https://github.com/masterjg/nwjs-vuejs-bootstrap",
   "bugs": {
-    "url": "https://github.com/masterjg/nwjs-bootstrap/issues",
+    "url": "https://github.com/masterjg/nwjs-vuejs-bootstrap/issues",
     "email": "masterj2@gmail.com"
   },
   "license": "CC-BY-NC-SA-4.0",
@@ -20,7 +21,7 @@
   "main": "./dist/index.html",
   "repository": {
     "type": "git",
-    "url": "git@github.com:masterjg/nwjs-bootstrap.git"
+    "url": "git@github.com:masterjg/nwjs-vuejs-bootstrap.git"
   },
   "scripts": {
     "generate:icons": "png2icons ./resources/icon.png ./resources/icon -allp -hm",

@@ -1,6 +1,6 @@
-# NW.js bootstrap
+# NW.js + Vue.js bootstrap
 
-NW.js bootstrap to kickstart your project.
+NW.js & Vue.js bootstrap to kickstart your project.
 
 ## Getting Started
 
