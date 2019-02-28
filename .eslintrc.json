@@ -37,7 +37,8 @@
       "error",
       {
         "ignore": [
-          "chrome"
+          "chrome",
+          "nw"
         ]
       }
     ]

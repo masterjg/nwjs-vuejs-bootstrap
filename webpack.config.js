@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const NwjsWebpackPlugin = require('nwjs-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 // @ts-ignore
 process.traceDeprecation = true;
@@ -13,7 +14,8 @@ const isInDevMode = mode === 'development';
 module.exports = {
   stats: 'minimal',
   externals: {
-    chrome: 'chrome'
+    chrome: 'chrome',
+    nw: 'nw'
   },
   devtool: 'source-map',
   mode,
@@ -23,8 +25,24 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].dist.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
   plugins: (() => {
     const plugins = [
+      new VueLoaderPlugin(),
       new CleanWebpackPlugin([ path.resolve(__dirname, 'dist') ], {
         exclude: [ '.gitkeep' ],
         verbose: false
@@ -46,5 +64,10 @@ module.exports = {
     }
     return plugins;
   })(),
-  watch: isInDevMode
+  watch: isInDevMode,
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.js'
+    }
+  }
 };
