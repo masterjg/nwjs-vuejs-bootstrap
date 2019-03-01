@@ -3,14 +3,6 @@
     "plugin:vue/recommended"
   ],
   "rules": {
-    "import/no-unresolved": [
-      "error",
-      {
-        "ignore": [
-          "chrome",
-          "nw"
-        ]
-      }
-    ]
+
   }
 }

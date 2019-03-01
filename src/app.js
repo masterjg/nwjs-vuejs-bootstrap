@@ -9,7 +9,6 @@ Vue.use(Vuetify);
 
 new Vue({
   el: '#app',
-  template: '<v-app><App/></v-app>',
   components: {
     App
   },
@@ -17,7 +16,8 @@ new Vue({
     this.$nextTick(() => {
       nw.Window.get().show();
     });
-  }
+  },
+  template: '<v-app><App/></v-app>'
 });
 
 // // @ts-ignore

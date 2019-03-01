@@ -41,7 +41,6 @@
     "copy-webpack-plugin": "^4.0.0",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
-    "eslint-plugin-vue": "^5.2.2",
     "html-webpack-plugin": "^3.2.0",
     "material-icons-base64": "^1.1.5",
     "nwjs-builder-phoenix": "^1.15.0",

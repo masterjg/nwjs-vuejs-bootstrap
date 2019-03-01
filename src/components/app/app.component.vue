@@ -1,6 +1,5 @@
 <template>
-    <div class="application--wrap">
-    </div>
+  <div class="application--wrap" />
 </template>
 
 <script>
@@ -12,8 +11,8 @@
 <style src="material-icons-base64/index.css"></style>
 
 <style>
-    html
-    {
-        overflow: auto;
-    }
+  html
+  {
+      overflow: auto;
+  }
 </style>
