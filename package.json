@@ -24,6 +24,10 @@
     "url": "git@github.com:masterjg/nwjs-vuejs-bootstrap.git"
   },
   "scripts": {
+    "postinstall:submodules:git": "git submodule update --remote --init",
+    "postinstall:submodules:install": "pnpm --prefix ./extensions/vue-devtools i",
+    "postinstall:submodules:build": "pnpm --prefix ./extensions/vue-devtools run build",
+    "postinstall": "pnpm run postinstall:submodules:git && pnpm run postinstall:submodules:install && pnpm run postinstall:submodules:build",
     "generate:icons": "png2icons ./resources/icon.png ./resources/icon -allp -hm",
     "start": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack && build --concurrent --tasks win-x64,linux-x64,mac-x64 .",

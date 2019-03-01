@@ -58,7 +58,7 @@ module.exports = {
     if (isInDevMode) {
       plugins.push(
         new NwjsWebpackPlugin({
-          command: 'run'
+          command: 'run . -- --load-extension=extensions/vue-devtools/shells/chrome/'
         })
       );
     }
