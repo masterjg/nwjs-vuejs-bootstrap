@@ -31,11 +31,6 @@
     "build:lnx": "cross-env NODE_ENV=production webpack && build --tasks linux-x64 .",
     "build:mac": "cross-env NODE_ENV=production webpack && build --tasks mac-x64 ."
   },
-  "dependencies": {
-    "vue": "^2.6.7",
-    "vue-async-computed": "^3.6.1",
-    "vuetify": "^1.5.4"
-  },
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.0.0",
@@ -47,10 +42,13 @@
     "nwjs-builder-phoenix": "^1.15.0",
     "nwjs-webpack-plugin": "git@github.com:masterjg/nwjs-webpack-plugin.git",
     "png2icons": "^1.0.1",
+    "vue": "^2.6.7",
+    "vue-async-computed": "^3.6.1",
     "vue-loader": "^15.6.4",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.7",
     "vuex": "^3.1.0",
+    "vuetify": "^1.5.4",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
   },
