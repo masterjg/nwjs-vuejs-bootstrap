@@ -9,6 +9,7 @@ devDependencies:
   css-loader: 2.1.0
   html-webpack-plugin: 3.2.0
   material-icons-base64: 1.1.5
+  nw-vue-devtools: 1.2.0
   nwjs-builder-phoenix: 1.15.0
   nwjs-webpack-plugin: github.com/masterjg/nwjs-webpack-plugin/0d83316c655aa1a3ece16fbab44ac6de244f1199
   png2icons: 1.0.1
@@ -2692,6 +2693,11 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+  /nw-vue-devtools/1.2.0:
+    dev: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-y9i6Ei3X9UFLBvUFOZiuQKx1U7S5Mdc0bnv2d8KkSXR+VKf5tJzgJQqxELoOP08ZvWeai7Iw5OmuFPBXyayueQ==
   /nwjs-builder-phoenix/1.15.0:
     dependencies:
       7zip-bin: 2.4.1
@@ -4377,6 +4383,7 @@ specifiers:
   css-loader: ^2.1.0
   html-webpack-plugin: ^3.2.0
   material-icons-base64: ^1.1.5
+  nw-vue-devtools: ^1.2.0
   nwjs-builder-phoenix: ^1.15.0
   nwjs-webpack-plugin: 'git+ssh://git@github.com/masterjg/nwjs-webpack-plugin.git'
   png2icons: ^1.0.1

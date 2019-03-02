@@ -1,3 +1,0 @@
-[submodule "extensions/vue-devtools"]
-	path = extensions/vue-devtools
-	url = https://github.com/vuejs/vue-devtools.git
