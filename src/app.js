@@ -1,11 +1,13 @@
 import Vue from 'vue/dist/vue';
 import AsyncComputed from 'vue-async-computed';
 import Vuetify from 'vuetify';
+import Vuex from 'vuex';
 import nw from 'nw';
 import App from './components/app/app.component.vue';
 
 Vue.use(AsyncComputed);
 Vue.use(Vuetify);
+Vue.use(Vuex);
 
 new Vue({
   el: '#app',

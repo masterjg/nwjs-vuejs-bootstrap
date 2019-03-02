@@ -16,6 +16,7 @@ devDependencies:
   vue-loader: 15.7.0
   vue-style-loader: 4.1.2
   vue-template-compiler: 2.6.8
+  vuex: 3.1.0
   webpack: 4.29.6
   webpack-cli: 3.2.3
 packages:
@@ -4001,6 +4002,10 @@ packages:
       vue: ^2.5.18
     resolution:
       integrity: sha512-hlTJHh4a1vAZQq4XwIcEpdDXoKNPqXbE95iV2a780FXvFnacu7qjHO4BrOUOkWGeAuFb1NTQM2vJtb4Jhxn26Q==
+  /vuex/3.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-mdHeHT/7u4BncpUZMlxNaIdcN/HIt1GsGG5LKByArvYG/v6DvHcOxvDCts+7SRdCoIRGllK8IMZvQtQXLppDYg==
   /watchpack/1.6.0:
     dependencies:
       chokidar: 2.1.2
@@ -4227,7 +4232,6 @@ packages:
     dev: true
     name: nwjs-webpack-plugin
     resolution:
-      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/masterjg/nwjs-webpack-plugin/tar.gz/643618e34dae35b4b1b8de9a2d26a3c3770ad47b'
     version: 0.3.1
 registry: 'https://registry.npmjs.org/'
@@ -4250,5 +4254,6 @@ specifiers:
   vue-style-loader: ^4.1.2
   vue-template-compiler: ^2.6.7
   vuetify: ^1.5.4
+  vuex: ^3.1.0
   webpack: ^4.29.5
   webpack-cli: ^3.2.3
