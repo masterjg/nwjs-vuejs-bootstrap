@@ -1,9 +1,16 @@
 <template>
-  <div class="application--wrap" />
+  <div class="application--wrap">
+    <CPUInfo />
+  </div>
 </template>
 
 <script>
+  import CPUInfo from './components/cpu-info/cpu-info.component.vue';
+
   export default {
+    components: {
+      CPUInfo
+    }
   };
 </script>
 

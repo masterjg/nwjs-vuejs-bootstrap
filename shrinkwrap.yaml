@@ -1,7 +1,3 @@
-dependencies:
-  vue: 2.6.8
-  vue-async-computed: 3.6.1
-  vuetify: 1.5.4
 devDependencies:
   clean-webpack-plugin: 1.0.1
   copy-webpack-plugin: 4.6.0
@@ -9,13 +5,16 @@ devDependencies:
   css-loader: 2.1.0
   html-webpack-plugin: 3.2.0
   material-icons-base64: 1.1.5
-  nw-vue-devtools: 1.2.0
+  nw-vue-devtools: 1.3.0
   nwjs-builder-phoenix: 1.15.0
   nwjs-webpack-plugin: github.com/masterjg/nwjs-webpack-plugin/643618e34dae35b4b1b8de9a2d26a3c3770ad47b
   png2icons: 1.0.1
+  vue: 2.6.8
+  vue-async-computed: 3.6.1
   vue-loader: 15.7.0
   vue-style-loader: 4.1.2
   vue-template-compiler: 2.6.8
+  vuetify: 1.5.4
   vuex: 3.1.0
   webpack: 4.29.6
   webpack-cli: 3.2.3
@@ -2550,11 +2549,11 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-  /nw-vue-devtools/1.2.0:
+  /nw-vue-devtools/1.3.0:
     dev: true
     requiresBuild: true
     resolution:
-      integrity: sha512-y9i6Ei3X9UFLBvUFOZiuQKx1U7S5Mdc0bnv2d8KkSXR+VKf5tJzgJQqxELoOP08ZvWeai7Iw5OmuFPBXyayueQ==
+      integrity: sha512-GQj4EaF8UkK0vPIzYbP71Mj0LmvwvnVu06tpZ8uWxIrSrK46GkRvyMsg2vvHDu1ZL2n1YBtQ5gJOLMU7ICjnKA==
   /nwjs-builder-phoenix/1.15.0:
     dependencies:
       7zip-bin: 2.4.1
@@ -3952,7 +3951,7 @@ packages:
     resolution:
       integrity: sha1-XX6kW7755Kb/ZflUOOCofDV9WnM=
   /vue-async-computed/3.6.1:
-    dev: false
+    dev: true
     peerDependencies:
       vue: ~2
     resolution:
@@ -3993,11 +3992,11 @@ packages:
     resolution:
       integrity: sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
   /vue/2.6.8:
-    dev: false
+    dev: true
     resolution:
       integrity: sha512-+vp9lEC2Kt3yom673pzg1J7T1NVGuGzO9j8Wxno+rQN2WYVBX2pyo/RGQ3fXCLh2Pk76Skw/laAPCuBuEQ4diw==
   /vuetify/1.5.4:
-    dev: false
+    dev: true
     peerDependencies:
       vue: ^2.5.18
     resolution:
@@ -4232,6 +4231,7 @@ packages:
     dev: true
     name: nwjs-webpack-plugin
     resolution:
+      registry: 'https://registry.npmjs.org/'
       tarball: 'https://codeload.github.com/masterjg/nwjs-webpack-plugin/tar.gz/643618e34dae35b4b1b8de9a2d26a3c3770ad47b'
     version: 0.3.1
 registry: 'https://registry.npmjs.org/'
@@ -4244,7 +4244,7 @@ specifiers:
   css-loader: ^2.1.0
   html-webpack-plugin: ^3.2.0
   material-icons-base64: ^1.1.5
-  nw-vue-devtools: ^1.2.0
+  nw-vue-devtools: ^1.3.0
   nwjs-builder-phoenix: ^1.15.0
   nwjs-webpack-plugin: 'git+ssh://git@github.com/masterjg/nwjs-webpack-plugin.git'
   png2icons: ^1.0.1
