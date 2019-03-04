@@ -12,14 +12,14 @@ Vue.use(Vuex);
 new Vue({
   el: '#app',
   components: {
-    App
+    App,
   },
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
       nw.Window.get().show();
     });
   },
-  template: '<v-app><App/></v-app>'
+  template: '<v-app><App/></v-app>',
 });
 
 // // @ts-ignore
