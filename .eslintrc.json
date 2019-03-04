@@ -21,6 +21,13 @@
         ]
       }
     ],
-    "no-new": "off"
+    "no-new": "off",
+    "vue/html-indent": [
+      "error",
+      2,
+      {
+        "baseIndent": 0
+      }
+    ]
   }
 }

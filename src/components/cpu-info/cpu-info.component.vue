@@ -1,10 +1,10 @@
 <template>
-  <div>
-    CPU info
-  </div>
+<div>
+  CPU info
+</div>
 </template>
 
 <script>
-  export default {
-  };
+export default {
+};
 </script>
