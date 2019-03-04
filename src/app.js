@@ -3,7 +3,7 @@ import AsyncComputed from 'vue-async-computed';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';
 import nw from 'nw';
-import App from './components/app/app.component.vue';
+import App from './app.component.vue';
 
 Vue.use(AsyncComputed);
 Vue.use(Vuetify);
