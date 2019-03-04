@@ -22,6 +22,7 @@
       }
     ],
     "no-new": "off",
+    "no-plusplus": "off",
     "vue/html-indent": [
       "error",
       2,

@@ -1,7 +1,21 @@
 <template>
-<div class="application--wrap">
-  <CPUInfo />
-</div>
+<v-layout row>
+  <v-flex xs12>
+    <v-card>
+      <v-toolbar
+        color="white"
+        flat
+      >
+        <v-toolbar-title class="grey--text text--darken-4">
+          Computer info
+        </v-toolbar-title>
+        <v-spacer />
+      </v-toolbar>
+      <c-p-u-info />
+      <v-footer class="mt-5" />
+    </v-card>
+  </v-flex>
+</v-layout>
 </template>
 
 <script>
@@ -20,6 +34,6 @@ export default {
 <style>
 html
 {
-    overflow: auto;
+  overflow: auto;
 }
 </style>
