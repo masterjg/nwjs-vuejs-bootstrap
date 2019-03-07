@@ -7,6 +7,8 @@
       </v-toolbar-title>
       <v-spacer />
       <c-p-u-info />
+      <v-spacer />
+      <memory-info />
     </v-card>
   </v-flex>
 </v-layout>
@@ -14,10 +16,12 @@
 
 <script>
 import CPUInfo from './components/cpu-info/cpu-info.component.vue';
+import MemoryInfo from './components/memory-info/memory-info.component.vue';
 
 export default {
   components: {
     CPUInfo,
+    MemoryInfo,
   },
 };
 </script>
