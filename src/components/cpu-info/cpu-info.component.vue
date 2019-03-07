@@ -31,7 +31,7 @@
       >
         Features:
         <v-spacer />
-        {{ cpuInfo.features.join(', ') }}
+        {{ cpuInfo.features ? cpuInfo.features.join(', ') : null }}
       </v-flex>
       <v-flex
         xs2
@@ -71,15 +71,8 @@ export default {
   data() {
     return {
       reloads: 0,
-      usages: [
-        10, 50, 20, 50,
-      ],
+      cpuInfoPrevious: null,
     };
-  },
-  async mounted() {
-    setInterval(async () => {
-      this.reloads++;
-    }, 1000);
   },
   asyncComputed: {
     cpuInfo: {
@@ -91,7 +84,34 @@ export default {
       watch: [
         'reloads',
       ],
+      default: {},
     },
+  },
+  computed: {
+    usages() {
+      if (!this.cpuInfo || !this.cpuInfo.processors
+      || !this.cpuInfoPrevious || !this.cpuInfoPrevious.processors) {
+        return [];
+      }
+      return this.cpuInfo.processors.map((cpuInfo, processorId) => {
+        const currentUsage = this.cpuInfo.processors[processorId].usage;
+        const previousUsage = this.cpuInfoPrevious.processors[processorId].usage;
+        const kernelUsageDiff = currentUsage.kernel - previousUsage.kernel;
+        const userUsageDiff = currentUsage.user - previousUsage.user;
+        const totalUsageDiff = currentUsage.total - previousUsage.total;
+        return Math.floor((kernelUsageDiff + userUsageDiff) / totalUsageDiff * 100);
+      });
+    },
+  },
+  watch: {
+    cpuInfo(newValue, oldValue) {
+      this.cpuInfoPrevious = oldValue;
+    },
+  },
+  async mounted() {
+    setInterval(async () => {
+      this.reloads++;
+    }, 250);
   },
 };
 </script>
