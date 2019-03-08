@@ -15,7 +15,7 @@ module.exports = {
   stats: 'minimal',
   externals: {
     chrome: 'chrome',
-    nw: 'nw'
+    nw: 'nw',
   },
   devtool: 'source-map',
   mode,
@@ -23,43 +23,44 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/app.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].dist.js'
+    filename: '[name].dist.js',
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader'
-        ]
-      }
-    ]
+          'css-loader',
+        ],
+      },
+    ],
   },
   plugins: (() => {
     const plugins = [
       new VueLoaderPlugin(),
-      new CleanWebpackPlugin([ path.resolve(__dirname, 'dist') ], {
-        exclude: [ '.gitkeep' ],
-        verbose: false
+      new CleanWebpackPlugin([path.resolve(__dirname, 'dist')], {
+        exclude: ['.gitkeep'],
+        verbose: false,
       }),
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
-        filename: 'index.html'
+        filename: 'index.html',
       }),
       new CopyWebpackPlugin([
-        path.resolve(__dirname, 'src/icon.png')
-      ])
+        path.resolve(__dirname, 'src/icon.png'),
+      ]),
     ];
     if (isInDevMode) {
       plugins.push(
         new NwjsWebpackPlugin({
-          command: 'run . -- --load-extension=./node_modules/nw-vue-devtools/extension'
-        })
+          command: 'run . -- --load-extension=./node_modules/nw-vue-devtools/extension',
+          commandDir: null,
+        }),
       );
     }
     return plugins;
@@ -67,7 +68,7 @@ module.exports = {
   watch: isInDevMode,
   resolve: {
     alias: {
-      vue$: 'vue/dist/vue.js'
-    }
-  }
+      vue$: 'vue/dist/vue.js',
+    },
+  },
 };
