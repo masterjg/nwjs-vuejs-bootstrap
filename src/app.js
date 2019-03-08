@@ -21,17 +21,3 @@ new Vue({
   },
   template: '<v-app><App/></v-app>',
 });
-
-// async function setStorageDataInDOM () {
-//   const storageInfo = await getStorageData();
-//   document.getElementById('storage').innerHTML = `
-//     <h2>Storage</h2>
-//     ${storageInfo.map(storage => `[ ${storage.type} / ${storage.id} ] <strong>${storage.name}</strong> ${(storage.capacity * 1e-9).toFixed(2)} GB`).join('<br/>')}<br/>
-//   `;
-// }
-
-// async function getStorageData () {
-//   return new Promise((resolve) => {
-//     chrome.system.storage.getInfo(resolve);
-//   });
-// }
