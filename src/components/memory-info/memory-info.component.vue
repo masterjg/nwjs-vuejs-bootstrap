@@ -10,7 +10,7 @@
       wrap
     >
       <v-flex
-        xs2
+        xs12
         class="ma-2"
       >
         Usage:

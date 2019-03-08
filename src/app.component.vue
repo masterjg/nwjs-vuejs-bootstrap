@@ -5,10 +5,9 @@
       <v-toolbar-title class="grey--text text--darken-4">
         Computer info
       </v-toolbar-title>
-      <v-spacer />
       <c-p-u-info />
-      <v-spacer />
       <memory-info />
+      <storage-info />
     </v-card>
   </v-flex>
 </v-layout>
@@ -17,11 +16,13 @@
 <script>
 import CPUInfo from './components/cpu-info/cpu-info.component.vue';
 import MemoryInfo from './components/memory-info/memory-info.component.vue';
+import StorageInfo from './components/storage-info/storage-info.component.vue';
 
 export default {
   components: {
     CPUInfo,
     MemoryInfo,
+    StorageInfo,
   },
 };
 </script>
