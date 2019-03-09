@@ -12,15 +12,6 @@
     "plugin:vue/recommended"
   ],
   "rules": {
-    "import/no-unresolved": [
-      "error",
-      {
-        "ignore": [
-          "chrome",
-          "nw"
-        ]
-      }
-    ],
     "no-new": "off",
     "no-plusplus": "off",
     "vue/html-indent": [
@@ -30,5 +21,8 @@
         "baseIndent": 0
       }
     ]
+  },
+  "settings": {
+    "import/resolver": "webpack"
   }
 }

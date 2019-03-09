@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import CPUInfo from './components/cpu-info/cpu-info.component.vue';
-import MemoryInfo from './components/memory-info/memory-info.component.vue';
-import StorageInfo from './components/storage-info/storage-info.component.vue';
+import CPUInfo from './components/cpu-info/cpu-info.component';
+import MemoryInfo from './components/memory-info/memory-info.component';
+import StorageInfo from './components/storage-info/storage-info.component';
 
 export default {
   components: {

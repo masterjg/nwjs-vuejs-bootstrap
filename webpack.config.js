@@ -70,5 +70,13 @@ module.exports = {
     alias: {
       vue$: 'vue/dist/vue.js',
     },
+    modules: [
+      'src',
+      'node_modules',
+    ],
+    extensions: [
+      '.js',
+      '.vue',
+    ],
   },
 };
