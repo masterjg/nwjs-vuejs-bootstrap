@@ -1,32 +1,43 @@
 <template>
-<v-layout row>
-  <v-flex xs12>
-    <v-card>
-      <v-toolbar-title class="grey--text text--darken-4">
-        Computer info
-      </v-toolbar-title>
-      <c-p-u-info />
-      <memory-info />
-      <storage-info />
-    </v-card>
-  </v-flex>
-</v-layout>
+<v-app>
+  <AppSide />
+  <v-content>
+    <v-container
+      fluid
+      fill-height
+      pa-0
+    >
+      <AppMain />
+    </v-container>
+  </v-content>
+  <AppFooter />
+</v-app>
 </template>
 
 <script>
 import nw from 'nw';
-import Menu from 'services/Menu';
-import CPUInfo from './components/cpu-info/cpu-info.component';
-import MemoryInfo from './components/memory-info/memory-info.component';
-import StorageInfo from './components/storage-info/storage-info.component';
+import Menu from 'util/menu';
+import { mapState, mapActions, mapGetters } from 'vuex';
+import AppStore from './app.store';
+import AppFooter from './components/footer/footer.component';
+import AppSide from './components/side/side.component';
+import AppMain from './components/main/main.component';
 
 export default {
   components: {
-    CPUInfo,
-    MemoryInfo,
-    StorageInfo,
+    AppFooter,
+    AppSide,
+    AppMain,
   },
-  beforeCreate() {
+  computed: {
+    ...mapState('App', {
+      // @todo finish up
+    }),
+    ...mapGetters('App', {
+      // @todo finish up
+    }),
+  },
+  created() {
     Menu.setUp({
       File: {
         Exit: {
@@ -37,6 +48,12 @@ export default {
         },
       },
     });
+    this.$store.registerModule('App', AppStore);
+  },
+  methods: {
+    ...mapActions('App', [
+
+    ]),
   },
 };
 </script>
@@ -45,8 +62,7 @@ export default {
 <style src="material-icons-base64/index.css"></style>
 
 <style>
-html
-{
-  overflow: auto;
+html {
+  overflow: hidden;
 }
 </style>

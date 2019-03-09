@@ -1,6 +1,6 @@
 {
   "name": "nwjs-vuejs-bootstrap",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "NW.js + Vue.js bootstrap to kickstart your project.",
   "keywords": [
     "nw.js",
@@ -32,6 +32,8 @@
     "build:mac": "cross-env NODE_ENV=production webpack && build --tasks mac-x64 ."
   },
   "dependencies": {
+    "marsdb": "^0.6.11",
+    "marsdb-localforage": "^0.1.0",
     "vue": "^2.6.7",
     "vue-async-computed": "^3.6.1",
     "vuetify": "^1.5.4",

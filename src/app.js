@@ -10,6 +10,7 @@ Vue.use(Vuetify);
 Vue.use(Vuex);
 
 new Vue({
+  store: new Vuex.Store(),
   el: '#app',
   components: {
     App,
@@ -19,5 +20,5 @@ new Vue({
       nw.Window.get().show();
     });
   },
-  template: '<v-app><App/></v-app>',
+  template: '<App/>',
 });
