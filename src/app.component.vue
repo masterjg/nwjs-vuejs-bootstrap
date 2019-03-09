@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import nw from 'nw';
+import Menu from 'services/Menu';
 import CPUInfo from './components/cpu-info/cpu-info.component';
 import MemoryInfo from './components/memory-info/memory-info.component';
 import StorageInfo from './components/storage-info/storage-info.component';
@@ -23,6 +25,18 @@ export default {
     CPUInfo,
     MemoryInfo,
     StorageInfo,
+  },
+  beforeCreate() {
+    Menu.setUp({
+      File: {
+        Exit: {
+          key: 'esc',
+          click: () => {
+            nw.App.quit();
+          },
+        },
+      },
+    });
   },
 };
 </script>
